@@ -1,15 +1,17 @@
-## PT-BR
-### Notebooks de Aulas
-Neste repositório estou incluindo os meus notebooks criados a partir das aulas dos cursos em Data Science/Machine Learning que 
-venho fazendo, especialmente cursos da Alura (mas também alguns do youtube). <br>
-Alguns cursos disponibilizam notebooks preformatados e eu apenas fui "preenchendo", outros estão criados 'do zero', mas
-na maioria deles eu incluí um bom número de comentários/anotações sobre o que eu estava fazendo (e principalmente porquê). <br>
-Não raro, há alguns 'interlúdios' porque me bateu uma curiosidade em certa parte do código e eu fui ver o que acontecia. <br>
+#### PT-BR
+### Projetos 
 
-Como não tenho experiência de trabalho (no momento), há também algumas observações sobre o que suspeito que são boas/más práticas.
+Aqui estão projetos introdutórios feitos em aula, na sua maior parte criados a partir de cursos da Alura.
 
-### Algumas observações:
-- Alguns notebooks são bem introdutórios, como os dois de Python pra Dados. Não incluí muitas observações que eu me lembre;
-- Alguns notebooks estão incompletos, como o de Python - Inteligência Artificial Aplicada eu não terminei o último projeto do curso (por isso não finalizei o curso ainda); ou o de Scikit-Learn do Free Code Camp (que eu resolvi terminar a trilha da Alura antes de dar prosseguimento).
-- Alguns notebooks demandam bases de dados externas, que eu teria que baixar e adicionar ao notebook pra rodar; depois de ter feito uns assim, comecei a dar um jeito de puxar as bases de dados direto online, pra que seja possível rodar em qualquer lugar. De qualquer forma, vou procurar botar esses dados externos em pastas para que seja possível rodar o notebook independentemente.
-- Que eu me lembre, a maioria dos notebooks foram feitos no google Colab, e não no Jupyter, porque é o ambiente que a Alura geralmente usa.
+Como meu foco é em ciência de dados, são em sua maior parte notebooks; porém, há também alguns códigos em python feitos no VSCode.
+
+Talvez o leitor encontre nos meus códigos um excesso de 'comentários', mas isso se deve ao fato de serem anotações de aula, e/ou questionamentos para verificar depois.
+
+#### EN
+### Projects
+
+Here are introductory projects done in class, mostly created from Alura courses.
+
+Since my focus is on data science, most of them are notebooks; however, there are also some Python code written in VSCode.
+
+The reader might find an excess of 'comments' in my code, but this is because they are class notes and/or questions to be checked later.
