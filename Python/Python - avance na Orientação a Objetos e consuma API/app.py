@@ -1,18 +1,28 @@
-from modelos.restaurante2 import Restaurante
+import requests
+import json
 
-restaurante_praca = Restaurante('praça', 'Gourmet')
-restaurante_mexicano = Restaurante('Mexican Food', 'Mexicana')
-restaurante_japones = Restaurante('Japa', 'Japonesa')
+url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'
+response = requests.get(url)
+print(response)     # response [200] é indicativo de que a solicitação foi atendida com sucesso
 
-restaurante_mexicano.alternar_estado()
+if response.status_code == 200:
+    dados_json = response.json()
+    dados_restaurante = {}
+    for elemento in dados_json: 
+        nome_do_restaurante = elemento['Company']
+        if nome_do_restaurante not in dados_restaurante:
+            dados_restaurante[nome_do_restaurante] = []
 
-restaurante_praca.receber_avaliacao('Jean', 9)
-restaurante_praca.receber_avaliacao('Ana', 2)
-restaurante_praca.receber_avaliacao('Bento', 7.5)
+        dados_restaurante[nome_do_restaurante].append({
+            'item': elemento['Item'],
+            'preco': elemento['price'],
+            'descricao': elemento['description']
+        })
+    
+else:
+    print(f'O erro foi {response.status_code}')
 
-
-def main():
-    Restaurante.listar_restaurantes()
-
-if __name__ == '__main__':
-    main()
+for nome_do_restaurante, dados in dados_restaurante.items():
+    nome_do_arquivo = f'{nome_do_restaurante}.json'
+    with open(nome_do_arquivo, 'w') as arquivo_restaurante:
+        json.dump(dados, arquivo_restaurante, indent=4)
